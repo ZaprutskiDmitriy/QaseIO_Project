@@ -1,12 +1,14 @@
 package io.qase;
 
 import io.qase.page_object.*;
+import org.openqa.selenium.Alert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CreateTestcaseTest {
 
     @Test
-    public void createTestcaseTest() throws InterruptedException {
+    public void createTestcaseTest() {
         StartPage startPage = new StartPage();
         startPage.navigateToLoginPage();
 
@@ -32,7 +34,6 @@ public class CreateTestcaseTest {
         TestcasePage testcasePage = new TestcasePage();
         testcasePage.addTestcaseInfo();
 
-
+        Assert.assertEquals(projectPage.getAlertText(), "Test case was created successfully!");
     }
-
 }

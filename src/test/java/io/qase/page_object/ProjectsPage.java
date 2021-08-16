@@ -15,7 +15,7 @@ public class ProjectsPage extends BasePage {
     @FindBy(xpath = "//a[text()='TestqaseTest']")
     public WebElement nameOfProject;
 
-    @FindBy(xpath = "//*[@id=\"react-app\"]/div/div/div/div/table/tbody/tr[4]/td[8]/div/a")
+    @FindBy(xpath = "//a[text()='TestqaseTest']/../../../td[8]/div/a")
     public WebElement dropdownMenu;
 
     @FindBy(css = "a[href='/project/TESTQASETE/delete']")
